@@ -15,3 +15,8 @@
 .bike-gry-info{
     filter: grayscale(100%);
 }
+.bike-hvr-btn:hover{
+    color: #fff;
+    background-color: #E76F51;
+    border-color: #E76F51;
+}
