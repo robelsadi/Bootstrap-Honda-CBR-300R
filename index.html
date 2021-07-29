@@ -13,7 +13,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Custom CSS  -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Script for Modal -->
 </head>
+
 <body>
     <!-- Header Area Start -->
     <header class="bike-bg-info py-4">
@@ -29,7 +31,7 @@
                   <a class="nav-link mx-3 text-white" href="#">Shop</a>
                   <a class="nav-link mx-3 text-white" href="#">News</a>
                   <a class="nav-link mx-3 text-white" href="#">Contact</a>
-                  <button class="p-2 d-lg-block d-md-none d-sm-none ms-5 bike-bg-btn border-0"><a class="nav-link active text-white fw-bold" href="#">Login</a></button>
+                  <button type="button" class="btn active bike-bg-btn"><a href="#" class="text-decoration-none text-white fw-bold">Login</a></button>
                 </div>
               </div>
             </div>
@@ -40,45 +42,100 @@
                 <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
-                <div class="carousel-inner p-5">
-                  <div class="carousel-item active">
-                      <div class="row d-flex align-items-center">
-                          <div class="col-lg-7 text-white">
-                              <p>Computer-controlled digital transistorized with electronic advance</p>
-                              <h1>Honda CBR 300R</h1>
-                              <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-                              <button class="btn btn-warning">Purchase</button>
-                          </div>
-                          <div class="col-lg-5">
-                              <img src="images/header-bike.png" class="d-block w-100" alt="...">
-                          </div>
-                      </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="row d-flex align-items-center">
-                        <div class="col-lg-7">
-                            <h1>Cool Dude Headphone</h1>
-                            <p>This is the best headphone in the world for people who just want to waste time in front of funky world.</p>
-                            <h1>$199</h1>
-                            <button class="btn btn-warning">Buy Now</button>
-                        </div>
-                        <div class="col-lg-5">
-                            <img src="images/header-bike.png" class="d-block w-100" alt="...">
+                  <div class="carousel-inner p-5">
+                    <div class="carousel-item active">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-lg-7 col-md-6 col-12 text-white my-3">
+                                <p>Computer-controlled digital transistorized with electronic advance</p>
+                                <h1>Honda CBR 300R</h1>
+                                <p class="my-3">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                                <!-- Add Modal Dialog Box -->
+                                <button type="button" class="btn bike-bg-btn text-white" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Purchase</button>
+
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title p-2 bg-primary" id="exampleModalLabel"> <i class="fa fa-shopping-cart me-3"></i>Place An Order Now</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <form action="">
+                                          <div class="modal-body">
+                                              <div class="mb-3">
+                                                <label for="recipient-name" class="col-form-label text-secondary">Recipient Name:</label>
+                                                <input type="text" class="form-control" id="recipient-name">
+                                              </div>
+                                              <div class="mb-3">
+                                                <label for="exampleInputEmail1" class="form-label text-secondary">Email address:</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                <div id="emailHelp">
+                                                </div>
+                                              </div>
+                                              <div class="mb-3">
+                                                <label for="message-text" class="col-form-label text-secondary">Order Details:</label>
+                                                <textarea class="form-control" id="message-text"></textarea>
+                                              </div>
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Process Check Out</button>
+                                          </div>
+                                      </form>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            <div class="col-lg-5 col-md-6 col-12 text-white my-3">
+                                <img src="images/header-bike-1.png" class="d-block w-100" alt="...">
+                            </div>
                         </div>
                     </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="row d-flex align-items-center">
-                        <div class="col-lg-7">
-                            <h1>X-Box for your living room</h1>
-                            <p>This is the best x-box in the world for people who just want to waste time in front of fake sports.</p>
-                            <h1>$299</h1>
-                            <button class="btn btn-warning">Buy Now</button>
-                        </div>
-                        <div class="col-lg-5">
-                            <img src="images/header-bike.png" class="d-block w-100" alt="...">
+                    <div class="carousel-item">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-lg-7 col-md-6 col-12 text-white my-3">
+                                <p>Would you buy new the KTM RC 125?</p>
+                                <h1>KTM RC 125</h1>
+                                <p class="my-3">Explore KTM RC 125 current price in Bangladesh including full specifications, availability, showroom location and quick overview.</p>
+                                <!-- Add Modal Dialog Box -->
+                                <button type="button" class="btn bike-bg-btn text-white" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Purchase</button>
+
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title p-2 bg-primary" id="exampleModalLabel"> <i class="fa fa-shopping-cart me-3"></i>Place An Order Now</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <form action="">
+                                          <div class="modal-body">
+                                              <div class="mb-3">
+                                                <label for="recipient-name" class="col-form-label text-secondary">Recipient Name:</label>
+                                                <input type="text" class="form-control" id="recipient-name">
+                                              </div>
+                                              <div class="mb-3">
+                                                <label for="exampleInputEmail1" class="form-label text-secondary">Email address:</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                <div id="emailHelp">
+                                                </div>
+                                              </div>
+                                              <div class="mb-3">
+                                                <label for="message-text" class="col-form-label text-secondary">Order Details:</label>
+                                                <textarea class="form-control" id="message-text"></textarea>
+                                              </div>
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Process Check Out</button>
+                                          </div>
+                                      </form>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            <div class="col-lg-5 col-md-6 col-12 text-white my-3">
+                                <img src="images/header-bike-2.png" class="d-block w-100" alt="...">
+                            </div>
                         </div>
                     </div>
                   </div>
@@ -86,6 +143,187 @@
               </div>
           </section>
     </header>
+    <!-- Main Area Start -->
+    <main>
+      <!-- Featured Area Start -->
+      <section class="container my-5">
+        <div class="bg-white">
+          <!-- Featured Bikes Hader -->
+                <h1 class="d-flex justify-content-center fw-bold">Fetured Bikes 2021</h1>
+                <p class="d-flex justify-content-center bike-txt-info fw-bold">Best bike collection</p>
+          <!-- Featured Bikes Images -->
+            <div class="row gx-5 my-5">
+              <div class="col-lg-4 col-md-6 col-12 my-4">
+                <img class="img fluid bike-gry-info" width="100%" src="images/feature-bike.jpg" alt="">
+              </div>
+              <div class="col-lg-4 col-md-6 col-12 my-4">
+                <img class="img fluid" width="100%" src="images/feature-bike.jpg" alt="">
+              </div>
+              <div class="col-lg-4 col-md-6 col-12 my-4">
+                <img class="img fluid bike-gry-info" width="100%" src="images/feature-bike.jpg" alt="">
+              </div>
+            </div>
+        </div>
+      </section>
+      <!-- Latest New Area Start -->
+      <section class="container my-5">
+          <h1 class="d-flex justify-content-center fw-bold">Latest News</h1>
+
+          <div class="row row-cols-1 row-cols-md-3 g-4 my-5">
+            <div class="col">
+              <div class="card h-100">
+                <img src="images/bike-1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Ducati XDIAVEL S-73</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+                <div class="card-footer border-0 bg-transparent">
+                  <button type="button" class="btn btn-outline-danger">Read More</button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img src="images/bike-2.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Motorcycles & Scooters</h5>
+                  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                </div>
+                <div class="card-footer border-0 bg-transparent">
+                  <button type="button" class="btn btn-outline-danger">Read More</button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img src="images/bike-3.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">2021 Honda CBR500R</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+                <div class="card-footer border-0 bg-transparent">
+                  <button type="button" class="btn btn-outline-danger ">Read More</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+      <!-- Clients Area Start -->
+      <section class="container my-5">
+        <h1 class="d-flex justify-content-center align-items-center fw-bold">Happy <span class="ms-2 bike-txt-info">Clients Says</span></h1>
+        
+        <div class="row row-cols-1 row-cols-md-3 g-4 my-5">
+          <div class="col">
+            <div class="card p-5 flex-column">
+              <img src="images/user-1.png" class="card-img-top" alt="...">
+              <div class="card-body flex-column justify-content-center align-items-center text-center">
+                <p class="card-text">This was our first time renting from Royal Cars and we were very pleased with the whole experience. Your price was lower than other companies. Our rental experience was good from start to finish, so we’ll be back in the future.</p>
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="far fa-star"></i></span>
+                <h6 class="text-primary my-3">John Donga</h6>
+                <h6 class="my-3">Software Engineer</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card p-5 flex-column">
+              <img src="images/user-2.png" class="card-img-top" alt="...">
+              <div class="card-body flex-column justify-content-center align-items-center text-center">
+                <p class="card-text">This was our first time renting from Royal Cars and we were very pleased with the whole experience. Your price was lower than other companies. Our rental experience was good from start to finish, so we’ll be back in the future.</p>
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="far fa-star"></i></span>
+                <h6 class="text-primary my-3">Jannat Mou</h6>
+                <h6 class="my-3">Web Developer</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card p-5 flex-column">
+              <img src="images/user-3.png" class="card-img-top" alt="...">
+              <div class="card-body flex-column justify-content-center align-items-center text-center">
+                <p class="card-text">This was our first time renting from Royal Cars and we were very pleased with the whole experience. Your price was lower than other companies. Our rental experience was good from start to finish, so we’ll be back in the future.</p>
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="far fa-star"></i></span>
+                <h6 class="text-primary my-3">Tanya Protper</h6>
+                <h6 class="my-3">Hr Manager</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FAQ Area Star -->
+      <section class="container my-5">
+        <h1 class="d-flex justify-content-center align-items-center fw-bold d-flex-sm-column">Frequently<span class="ms-2 bike-txt-info">Questions</span></h1>
+        <div class="row my-5">
+          <div class="col-lg-5 col-md-5 col-12">
+            <img src="images/faq.png" width="100%" alt="">
+          </div>
+          <!-- Add Accordion Area -->
+          <div class="col-lg-7 col-md-7 col-12 my-4">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item mb-3">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <strong class="text-dark">What are the most important things I should know about riding a bike?</strong>
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Safety First! Always obey the rules of the road. Obey all traffic signals, signs, and laws. Get in the mindset of “driving” your bike—not just “riding” your bike. This will help you be a more focused and legally compliant bike rider. 
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item mb-3">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <strong class="text-dark">How can I tell if my helmet is old and I need a new one?</strong>
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Bear in mind that if the helmet did its job most people would tell you that they did not even hit their head, or did not hit their head that hard. And the thin shells on most helmets now tend to hide any dents in the foam. But if you can see marks on the shell or measure any foam crush at all, replace the helmet.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item mb-3">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <strong class="text-dark">My bike has been in storage is it safe to ride?</strong>
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Its entirely possible the bike is good and safe to ride with a bit of air in the tires and shocks/forks - this would heavily depend on the climate in the garage it was stored in and condition it was in before being hung up. Presuming the bike looks in good condition with little or no surface rust, the following are the things that might need attention apart from what a regular service would entail (regular service is things like chain clean and lube,tuning brake check etc.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item mb-3">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <strong class="text-dark">What rules should I follow when riding my bike?</strong>
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Bicycles are a fun and increasingly popular way to explore destinations. But whether you travel with your own bicycle or rent a bike from an on-demand kiosk or local vendor, it’s important to know and follow the local biking rules before hitting the road.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>

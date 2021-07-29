@@ -1,6 +1,17 @@
+/*====================================================================================
+                        Custom CSS For Special Circumtances 
+=======================================================================================*/
 .bike-bg-info{
     background-color: #264653;
 }
 .bike-bg-btn{
     background-color: #E76F51;
+    border: none;
+    border-color: #E76F51;
+}
+.bike-txt-info{
+    color: #E76F51;
+}
+.bike-gry-info{
+    filter: grayscale(100%);
 }
